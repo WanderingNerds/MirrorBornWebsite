@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.mirrorborngames.com" }], "destination": "https://mirrorborngames.com/:path*", "permanent": true }
+  ]
+}
