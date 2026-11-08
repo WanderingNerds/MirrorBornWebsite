@@ -36,10 +36,10 @@ handles the redirect between them. Don't add a second redirect in `vercel.json`,
 
 ## Game download
 
-The Download buttons point to `https://downloads.mirrorborngames.com/GameIdea-client-latest.zip`
-(search `GameIdea-client-latest` in `index.html` to change it). To make that URL work:
+The Download buttons point to `https://downloads.mirrorborngames.com/GameIdea-launcher.zip`
+(search `GameIdea-launcher` in `index.html` to change it). To make that URL work:
 
 1. Cloudflare → **R2** → your bucket → **Settings → Custom Domains → Connect Domain**, enter
    `downloads.mirrorborngames.com`. Cloudflare creates the DNS record and certificate.
 2. Upload each new build zip over the same name, e.g. from the GameIdea repo:
-   `aws s3 cp build/GameIdea-client-<sha>.zip s3://<bucket>/GameIdea-client-latest.zip --endpoint-url https://<account_id>.r2.cloudflarestorage.com`
+   `aws s3 cp <launcher zip> s3://<bucket>/GameIdea-launcher.zip --endpoint-url https://<account_id>.r2.cloudflarestorage.com`
