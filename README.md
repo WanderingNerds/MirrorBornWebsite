@@ -36,7 +36,7 @@ handles the redirect between them. Don't add a second redirect in `vercel.json`,
 
 ## Game download
 
-The Download buttons point to `https://downloads.mirrorborngames.com/GameIdea-launcher.zip`
+The Download buttons point to `https://pub-f0d9ca65f269490fb38c24eafb0b4cd4.r2.dev/GameIdea-launcher.zip`
 (search `GameIdea-launcher` in `index.html` to change it). To make that URL work:
 
 1. Cloudflare → **R2** → your bucket → **Settings → Custom Domains → Connect Domain**, enter
