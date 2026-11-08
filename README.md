@@ -33,3 +33,13 @@ Vercel's certificate issuance and double-cache. If you do want the proxy on late
 
 Choose which of `www` or the bare domain is primary in Vercel's **Settings → Domains**; Vercel
 handles the redirect between them. Don't add a second redirect in `vercel.json`, or the two can loop.
+
+## Game download
+
+The Download buttons point to `https://downloads.mirrorborngames.com/GameIdea-client-latest.zip`
+(search `GameIdea-client-latest` in `index.html` to change it). To make that URL work:
+
+1. Cloudflare → **R2** → your bucket → **Settings → Custom Domains → Connect Domain**, enter
+   `downloads.mirrorborngames.com`. Cloudflare creates the DNS record and certificate.
+2. Upload each new build zip over the same name, e.g. from the GameIdea repo:
+   `aws s3 cp build/GameIdea-client-<sha>.zip s3://<bucket>/GameIdea-client-latest.zip --endpoint-url https://<account_id>.r2.cloudflarestorage.com`
