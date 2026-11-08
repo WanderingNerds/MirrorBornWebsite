@@ -31,5 +31,5 @@ Preview locally: `npx serve .` (or just open `index.html`).
 Vercel's certificate issuance and double-cache. If you do want the proxy on later, set Cloudflare
 **SSL/TLS → Overview** to **Full (strict)** first, or you'll get redirect loops.
 
-`vercel.json` redirects `www` to the bare domain. To prefer `www` instead, flip it in Vercel's
-Domains settings and remove the redirect from `vercel.json`.
+Choose which of `www` or the bare domain is primary in Vercel's **Settings → Domains**; Vercel
+handles the redirect between them. Don't add a second redirect in `vercel.json`, or the two can loop.
